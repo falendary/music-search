@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html data-ng-app="index">
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>Music search</title>
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="core/content/css/font-awesome.min.css?v={date}">
+    <link rel="stylesheet" href="index/content/css/main.min.css?v={date}">
+
+</head>
+<body>
+
+<noscript>
+    <div class="browsermessage-background">
+        <p class="browsermessage">
+            You don't seem to have javascript enabled. Please <strong>enable javascript</strong> and refresh the
+            browser's tab
+        </p>
+    </div>
+</noscript>
+
+<div data-ng-include="'controllers/app.controller.html'"></div>
+
+<script src="core/scripts/jquery.min.js?v={date}"></script>
+<script src="core/scripts/corejs.min.js?v={date}"></script>
+<script src="core/scripts/fetch.min.js?v={date}"></script>
+<script src="core/scripts/angular.min.js?v={date}"></script>
+
+<script src="index/scripts/main.min.js?v={date}"></script>
+
+</body>
+</html>
