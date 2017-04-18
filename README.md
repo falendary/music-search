@@ -47,3 +47,9 @@ src/index/scripts/controllers/* -- *app and dialog controllers*
 src/index/scripts/services/* -- *logic layer, cookie service and dialog service*
 
 src/index/scripts/repositores/* -- *data acess layer*
+
+## Tests
+
+To run test execute:
+
+`npm test`
