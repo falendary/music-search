@@ -50,6 +50,6 @@ src/index/scripts/repositores/* -- *data acess layer*
 
 ## Tests
 
-To run test execute:
+To run tests execute:
 
 `npm test`
