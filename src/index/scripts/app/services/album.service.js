@@ -8,8 +8,13 @@
         return albumRepository.getByKey(id);
     };
 
+    var getTrackList = function (id) {
+        return albumRepository.getTrackList(id);
+    };
+
     module.exports = {
-        getByKey: getByKey
+        getByKey: getByKey,
+        getTrackList: getTrackList
     }
 
 

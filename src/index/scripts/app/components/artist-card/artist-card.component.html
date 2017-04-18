@@ -1,7 +1,7 @@
 <div class="card artist-card" data-ng-click="vm.openDialog($event)">
 
-    <div class="card-img">
-        <img data-ng-if="vm.item.images[0].url" data-ng-src="{{vm.item.images[0].url}}" src="" alt="">
+    <div class="card-img" style="background-image: url({{vm.item.images[0].url}})">
+
     </div>
     <div class="card-footer">
         {{vm.item.name}}

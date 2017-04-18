@@ -2,8 +2,10 @@
 
 var app = angular.module('index', []);
 
-app.controller('AppController', ['$scope', require('./app/controllers/app.controller.js')]);
-app.controller('CardDetailController', ['$scope', 'dialogService', 'data', require('./app/controllers/card-detail.controller.js')]);
+app.controller('AppController', ['$scope', require('./app/controllers/app/app.controller.js')]);
+app.controller('ArtistDetailController', ['$scope', 'dialogService', 'data', require('./app/controllers/artist-detail/artist-detail.controller.js')]);
+app.controller('AlbumDetailController', ['$scope', 'dialogService', 'data', require('./app/controllers/album-detail/album-detail.controller.js')]);
+app.controller('TrackDetailController', ['$scope', 'dialogService', 'data', require('./app/controllers/track-detail/track-detail.controller.js')]);
 
 app.service('dialogService', ['$rootScope', '$controller', '$compile', '$templateCache', require('./app/services/dialog.service')]);
 

@@ -9,7 +9,7 @@
     };
 
     module.exports = {
-        getByKey: getByKey
+        getByKey: getByKey,
     }
 
 

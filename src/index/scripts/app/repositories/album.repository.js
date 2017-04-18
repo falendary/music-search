@@ -18,8 +18,15 @@
 
     };
 
+    var getTrackList = function (id) {
+        return fetch('https://api.spotify.com/v1/albums/' + id + '/tracks').then(function (data) {
+            return data.json();
+        })
+    };
+
     module.exports = {
-        getByKey: getByKey
+        getByKey: getByKey,
+        getTrackList: getTrackList
     }
 
 }());

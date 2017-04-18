@@ -1,0 +1,78 @@
+<div data-ng-controller="AppController as vm">
+
+    <div class="section-pink">
+
+        <div class="abs-left-top design-author">
+            <img src="index/content/img/gl-logo@2x.png" alt="logo">
+        </div>
+
+        <div class="abs-right-top powered-by">
+            Powered by Spotify
+        </div>
+
+        <img src="index/content/img/hero-img@2x.png" alt="logo" class="logo">
+        <img src="index/content/img/Page 1@2x.png" alt="go down" class="go-down-arrow">
+
+    </div>
+    <div class="section-search">
+
+        <div class="search-wrap">
+            <input type="text" data-ng-model="vm.searchQuery" data-ng-keydown="vm.searchTrigger($event)"
+                   placeholder="Search for artist or album title">
+
+            <a href="#" class="pink-btn" data-ng-click="vm.search()">Search</a>
+        </div>
+
+    </div>
+    <div class="section-results">
+
+        <div data-ng-if="vm.items.length">
+            <div class="results-holder">
+
+                <div data-ng-repeat="item in vm.items track by item.id" class="card-holder">
+
+                    <div data-ng-if="item.type == 'album'">
+                        <album-card item="item"></album-card>
+                    </div>
+
+                    <div data-ng-if="item.type == 'artist'">
+                        <artist-card item="item"></artist-card>
+                    </div>
+
+                    <div data-ng-if="item.type == 'track'">
+                        <track-card item="item"></track-card>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="load-more-holder">
+                <a href="#" class="show-more pink-btn" data-ng-click="vm.loadMore()">SHOW ME MORE!</a>
+            </div>
+
+            <div class="loader {{vm.contentLoader ? 'visible' : ''}}">
+                <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+            </div>
+
+
+        </div>
+
+        <div data-ng-if="!vm.items.length" class="results-not-found">
+
+            <img src="index/content/img/Magnify@2x.png" alt="logo">
+
+            <p>Your results will appear here</p>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+        Designed by Geek Label - Powered by Spotify
+    </footer>
+
+
+</div>

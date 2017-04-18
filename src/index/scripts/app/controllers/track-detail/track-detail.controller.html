@@ -1,0 +1,41 @@
+<div class="card-detail dialog track-detail">
+
+    <div class="dialog-header">
+
+        <div class="img-holder">
+            <img src="" data-ng-if="vm.item.images[0].url" data-ng-src="{{vm.item.images[0].url}}" alt="">
+        </div>
+        <p class="d-name" data-ng-bind="vm.item.name"></p>
+
+        <a href="#" class="close-dialog" data-ng-click="vm.close()"><i class="fa fa-times"></i></a>
+
+    </div>
+    <div class="dialog-body">
+
+        <p class="dialog-body-header"><b>Album</b></p>
+
+        <div class="track-album">
+
+            <div class="track-album-image">
+
+                <img src="" data-ng-src="{{vm.item.album.images[0].url}}" alt="" width="100" height="100">
+
+            </div>
+
+            <div class="track-album-description">
+
+                <p class="track-album-name" data-ng-bind="vm.item.album.name"></p>
+
+            </div>
+
+        </div>
+
+        <p class="dialog-body-header" style="margin-top: 10px"><b>Artists</b></p>
+
+        <div data-ng-repeat="artist in vm.item.artists">
+            <p data-ng-bind="artist.name"></p>
+        </div>
+
+    </div>
+
+</div>

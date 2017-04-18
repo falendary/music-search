@@ -12,13 +12,11 @@
 
             var vm = this;
 
-            console.log('dialogService', dialogService);
-
             vm.openDialog = function($event) {
 
                 dialogService.show({
-                    templateUrl: 'controllers/card-detail.controller.html',
-                    controllerAs: 'CardDetailController as vm',
+                    templateUrl: 'controllers/artist-detail/artist-detail.controller.html',
+                    controllerAs: 'ArtistDetailController as vm',
                     locals: {
                         data: {
                             item: vm.item

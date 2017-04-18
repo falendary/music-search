@@ -78,7 +78,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 64px 10vw;
+    padding: 64px 10vw 16px;
 
     .card-holder {
       display: inline-block;
@@ -93,7 +93,7 @@ body {
         .card-img {
           width: 264px;
           filter: grayscale(60%);
-          background: #333441;
+          background-color: #333441;
           height: 266px;
           max-height: 266px;
           overflow: hidden;
@@ -178,25 +178,58 @@ footer {
   a {
     right: 4px;
     top: 4px;
-    color: #fff;
-    background: #B4455F;
-    text-decoration: none;
     position: absolute;
-    text-align: center;
     width: 120px;
-    font-family: "Raleway SemiBold";
-    height: 44px;
-    text-transform: uppercase;
-    line-height: 44px;
-    outline: none;
-    border-radius: 64px;
-    &:active {
-      outline: none;
-    }
-    &:hover {
-      text-decoration: none;
-    }
+    padding: 0;
+
   }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+  visibility: hidden;
+  &.visible {
+    visibility: visible;
+  }
+  i {
+    color: #fff;
+  }
+}
+
+.load-more-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+}
+
+.pink-btn {
+  color: #fff;
+  background: #B4455F;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 16px;
+  font-family: "Raleway SemiBold";
+  height: 44px;
+  text-transform: uppercase;
+  line-height: 44px;
+  outline: none;
+  border-radius: 64px;
+  &:active {
+    outline: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.show-more {
+
 }
 
 .dialog-wrapper {

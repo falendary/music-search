@@ -4,18 +4,20 @@
 
     var searchRepository = require('../repositories/search.repository');
 
-    var getList = function (query) {
-        return searchRepository.getList(query).then(function (data) {
+    var getList = function (query, offset) {
+        return searchRepository.getList(query, offset).then(function (data) {
 
             var items = [];
 
-            items = items.concat(data.albums.items);
-
-            items = items.concat(data.artists.items);
-
-            items = items.concat(data.tracks.items);
-
-            console.log('items', items);
+            if (data.hasOwnProperty('albums')) {
+                items = items.concat(data.albums.items);
+            }
+            if (data.hasOwnProperty('artists')) {
+                items = items.concat(data.artists.items);
+            }
+            if (data.hasOwnProperty('tracks')) {
+                items = items.concat(data.tracks.items);
+            }
 
             return items;
         })

@@ -18,8 +18,19 @@
 
     };
 
+    var getAlbumsList = function (id) {
+
+        var limit = 3;
+
+        return fetch('https://api.spotify.com/v1/artists/' + id + '/albums?limit=' + limit
+        ).then(function (data) {
+            return data.json();
+        })
+    };
+
     module.exports = {
-        getByKey: getByKey
+        getByKey: getByKey,
+        getAlbumsList: getAlbumsList
     }
 
 }());

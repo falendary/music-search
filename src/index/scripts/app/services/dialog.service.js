@@ -42,11 +42,13 @@
             var compiled = $compile(dialogElement)(templateScope);
 
             $('body').append(compiled);
+            $('body').css('overflow', 'hidden');
 
         };
 
         this.hide = function () {
             $('.dialog-wrapper').remove();
+            $('body').css('overflow', 'auto');
             dialogElement.html('');
 
             return new Promise(function (resolve, reject) {
@@ -56,6 +58,7 @@
 
         this.cancel = function () {
             $('.dialog-wrapper').remove();
+            $('body').css('overflow', 'auto');
             dialogElement.html('');
         };
 

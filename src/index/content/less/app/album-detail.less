@@ -1,0 +1,22 @@
+.album-detail {
+  .track-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    justify-content: space-between;
+  }
+  .track-name {
+    margin-top: 5px;
+    margin-left: 16px;
+    margin-right: 8px;
+    font-family: "Raleway Regular", sans-serif;
+  }
+
+  audio::-internal-media-controls-download-button{
+    display:none;
+  }
+
+  audio::-webkit-media-controls-enclosure {
+    overflow:hidden;
+  }
+}

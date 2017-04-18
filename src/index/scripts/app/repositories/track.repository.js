@@ -6,13 +6,7 @@
 
     var getByKey = function (id) {
 
-        return fetch('https://api.spotify.com/v1/tracks/' + id,
-            {
-                headers: {
-                    "Authorization": "Bearer " + cookiesService.getCookie('token'),
-                    "Content-Type": "application/x-www-form-urlencoded"
-                }
-            }).then(function (data) {
+        return fetch('https://api.spotify.com/v1/tracks/' + id).then(function (data) {
             return data.json();
         })
 

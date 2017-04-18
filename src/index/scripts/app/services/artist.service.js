@@ -8,8 +8,13 @@
         return artistService.getByKey(id);
     };
 
+    var getAlbumsList = function (id) {
+        return artistService.getAlbumsList(id);
+    };
+
     module.exports = {
-        getByKey: getByKey
+        getByKey: getByKey,
+        getAlbumsList: getAlbumsList
     }
 
 
