@@ -20,7 +20,7 @@ Build project:
 
 ## Project structure
 
-Production files
+###Production files
 
 dist/core  -- *libraries folder*
 
@@ -30,7 +30,7 @@ dist/index/content -- *css, img, fonts*
 
 dist/index/scripts -- *javascript*
 
-Source files
+###Source files
 
 src/index/index.html
 
