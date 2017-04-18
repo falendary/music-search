@@ -11,5 +11,12 @@ app.component('artistCard', require('./app/components/artist-card/artist-card.co
 app.component('albumCard', require('./app/components/album-card/album-card.component'));
 app.component('trackCard', require('./app/components/track-card/track-card.component'));
 
+app.run(function(){
+
+    var cookiesService = require('./app/services/cookie.service');
+
+    cookiesService.setCookie('token', 'BQAdCvzToN5O0jPs3T-HPvQkt976Ngfacp9GX_8KoXbmS0R9mb3wPUhXD_ZXwHqOFjUZZOfbfnZQ5srlAQaUKA');
+
+});
 
 require('./templates.min.js');

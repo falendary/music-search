@@ -2,9 +2,17 @@
 
     'use strict';
 
+    var cookiesService = require('../services/cookie.service');
+
     var getByKey = function (id) {
 
-        return fetch('https://api.spotify.com//v1/artists/' + id).then(function (data) {
+        return fetch('https://api.spotify.com/v1/artists/' + id,
+            {
+                headers: {
+                    "Authorization": "Bearer " + cookiesService.getCookie('token'),
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
+            }).then(function (data) {
             return data.json();
         })
 
