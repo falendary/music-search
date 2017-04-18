@@ -22,7 +22,8 @@
 
         var limit = 3;
 
-        return fetch('https://api.spotify.com/v1/artists/' + id + '/albums?limit=' + limit
+        return fetch('https://api.spotify.com/v1/artists/' + id + '/albums?album_type=album&limit=' + limit
+        //return fetch('https://api.spotify.com/v1/artists/' + id + '/albums?album_type=album'
         ).then(function (data) {
             return data.json();
         })
