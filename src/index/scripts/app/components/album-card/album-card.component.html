@@ -2,6 +2,18 @@
 
     <div class="card-img">
         <img data-ng-if="vm.item.images[0].url" data-ng-src="{{vm.item.images[0].url}}" src="" alt="">
+
+        <div class="card-img-not-found" data-ng-if="!vm.item.images[0].url">
+
+            <img class="img-bitmap" src="index/content/img/Bitmap@2x.png" alt="">
+
+            View Tracks
+
+        </div>
+
+        <div class="card-bottom-icon">
+            <img src="index/content/img/album-icon@2x.png" alt="">
+        </div>
     </div>
     <div class="card-footer">
         {{vm.item.name}}

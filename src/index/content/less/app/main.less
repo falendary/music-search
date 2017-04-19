@@ -42,7 +42,7 @@ body {
 
   .logo {
     margin-top: 12vh;
-    width: 43vw;
+    width: 40%;
   }
   .go-down-arrow {
     display: block;
@@ -67,6 +67,18 @@ body {
   background: #333441;
   height: 80px;
 
+}
+
+.card-img-not-found {
+  img.img-bitmap {
+    display: block;
+    width: 130px;
+    margin: 40px auto 14px;
+  }
+  font-family: "Raleway Regular";
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
 }
 
 .section-results {
@@ -96,11 +108,14 @@ body {
           background-color: #333441;
           height: 266px;
           max-height: 266px;
+          position: relative;
           overflow: hidden;
-          img {
-            min-height: 268px;
+          & > img {
+            //min-height: 268px;
             width: 100%;
           }
+
+
         }
         .card-footer {
           width: 100%;

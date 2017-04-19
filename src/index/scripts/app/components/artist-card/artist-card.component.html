@@ -2,6 +2,17 @@
 
     <div class="card-img" style="background-image: url({{vm.item.images[0].url}})">
 
+        <div class="card-img-not-found" data-ng-if="!vm.item.images[0].url">
+
+            <img class="img-bitmap" src="index/content/img/Bitmap@2x.png" alt="">
+
+            View Tracks
+
+        </div>
+
+        <div class="card-bottom-icon">
+            <img src="index/content/img/artist-icon@2x.png" alt="">
+        </div>
     </div>
     <div class="card-footer">
         {{vm.item.name}}
